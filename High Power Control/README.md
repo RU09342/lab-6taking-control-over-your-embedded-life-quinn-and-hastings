@@ -1,4 +1,4 @@
-### Lab 6: "High Power" Control
+# Lab 6: "High Power" Control
 
 In lab 6, pulse width modulation was used to control the switching of a relay and a high side switch for high power. With respect to the MSP, high power is anything that can damage the microprocessor. That is why it is important for devices like relays and mosfets to isolate something high such as 12V. High power is necessary when the MSP430 is not sufficient to provide the necessary voltage or current draw of the external circuit. The MSP430G2553 was used to create a square wave PWM signal with an assigned duty cycle.
 
