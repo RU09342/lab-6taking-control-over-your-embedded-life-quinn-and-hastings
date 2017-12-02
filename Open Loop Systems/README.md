@@ -14,6 +14,8 @@ The temperature of the 5v regulator is measured by an LM35 temperature sensor an
 ## System Modeling
 In order to formulate our control software, we first needed to collect data on the performane of our open loop system. The CPU fan was set to PWM duty cycles ranging from 100/1000 - 900/1000 at intervals of 100 and the temperature of the Voltage regulator was measured at each duty cycle. These data gave us a plot of PWM vs. temperature that could be sectioned into 3 piece wise linear functions. Within our code, it can be seen that one of these piece wise linear functions is used if the desired temperature falls within the temperature bounds of a given function in order to set the fans PWM.
 
+![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-quinn-and-hastings/blob/master/Open%20Loop%20Systems/Rplot01.png)
+
 ## Open Loop Control System
 In order to implement this software for an open loop system such as the one shown below, the OpenLoop folder should be downloaded and the main.c code should be ran on an MSP430F5529. In order to select a desired temperature, you must manually assign the variable 'temp' to that temperature. For communicating PWM to your fan, connect the PWM pin of the CPU fan to pin P1.5. For reading over UART, connect the transmission wire to P3.3 and the read wire to P3.4. Our software allows users to enter any temperature that they want, but will treat any temperature lower than 40 as 40 and any temperature higher than 72 as 72. Once the temperature is read in, the duty cycle is set to the predicted value given by one of the three piece wise functions.
 
