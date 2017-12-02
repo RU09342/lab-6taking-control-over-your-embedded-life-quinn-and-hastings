@@ -2,13 +2,13 @@
 The MSP430F5529 was chosen due to our comfort with this board. It was the board that we simply agreed would be the easier for us to use for this open loop system.
 
 ## Voltage Regulator
-A UA7805C 5v voltage regulator was used within this system.
+A linear voltage regulator is used to convert a 12V input to drive a load at a constant 5V. The regulator used was the UA7805C. The UA7805 is a three terminal device that can take in a varying voltage and still output a constant DC voltage of 5V. However as a linear regulator, the 7805 can only operate if its input voltage is greater than its output, in this case 5V.
 
 ## Fan Control
-For this application, we used a PWM signal from the F5529 to control the speed of the CPU fan. This PWM is automatically set based on the desired temperature.
+CPU fans are generically manufactured with two different designs, with the main difference being the addition or absence of a PWM input signal. In the case of this open loop system, the PWM signal was required in order for basic control of the fans speed. Using a PWM pin, a duty cycle could be used to control the speed of the fan. An Intel meant to be utilized within an I7 desktop computer was used in this application.
 
 ## Temperature Reading
-The temperature of the 5v regulator is measured by an LM35 temperature sensor and outputted as a voltage that is deciphered as being 10mv/degree celcius.
+An LM35 temperature sensor outputs a voltage that is dependent on the temperature of the device. Voltage outputs are expected to be in the units of (10mv/ \degree C), and can be interpreted by the MSP430F5529 micro-controller using logical computing in C. With the LM35, data about the performance of the open system can be dynamically interpreted and transmitted over a UART serial connection. 
 
 
 ## System Modeling
