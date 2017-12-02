@@ -10,6 +10,8 @@ For this lab, two different devices are used to control switching. The first is 
 
 A relay is an electro-mechanical system which can open and close a switch based on an input. Since they physically rely on the movement of a switch, the switching speed is limited by how fast the switch can move from terminal to terminal. You can see this effect in the video below where the PWM frequency is increased and decreased.
 
+https://youtu.be/8Fafob4IyqQ
+
 By experimentation, it was determined that the maximum switching speed of the relay is 180 Hz, as shown in the picture below.
 ![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-quinn-and-hastings/blob/master/High%20Power%20Control/RelayMAX.jpg)
 
