@@ -11,8 +11,10 @@ For this lab, two different devices are used to control switching. The first is 
 A relay is an electro-mechanical system which can open and close a switch based on an input. Since they physically rely on the movement of a switch, the switching speed is limited by how fast the switch can move from terminal to terminal. You can see this effect in the video below where the PWM frequency is increased and decreased.
 
 By experimentation, it was determined that the maximum switching speed of the relay is 180 Hz, as shown in the picture below.
+![alt text](https://github.com/RU09342/lab-6taking-control-over-your-embedded-life-quinn-and-hastings/blob/master/High%20Power%20Control/RelayMAX.jpg)
 
 ## MOSFET Switching
 
 The MOSFET high side switch is a circuit that is tied to Vcc, or in this case 12V, and drives a load when the PWM signal is high. MOSFET's not only provide a much greater maximum switching speed, they also require an input current of 0A which is extremely useful since this removes any chance of drawing too much current from the MSP430. In the video below it was experimentally determined that the MOSFET could achieve a maximum switching speed of 20 kHz. 
 
+https://youtu.be/6106lSPu51E
